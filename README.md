@@ -3,16 +3,7 @@
 OnlineLearningGround (OLG) is a MATLAB program with c++ mex files for demonstrating a non-holonomic ground vehicle motion computation up to the scale via ground predicction/classification on the KITTI benchmark dataset. 
 FOr details of the algorithm, please refer to the following related publication: 
 
-@INPROCEEDINGS{BLee15,
- author = {Bhoram Lee and Kostas Daniilidis and Daniel D. Lee}, 
- title = {Online self-supervised monocular visual odometry for ground vehicles}, \\
- booktitle = {2015 IEEE International Conference on Robotics and Automation (ICRA)}, \\
- year = {2015}, \\
- pages = {5232-5238}, \\
- doi = {10.1109/ICRA.2015.7139928}, \\
- ISSN = {1050-4729}, \\
- month = {May},\\
-}
+B. Lee, K. Daniilidis,and Daniel D. Lee,Online self-supervised monocular visual odometry for ground vehicles, ICRA '15.
 
 If you find this software useful or if you use this software for your research, we would be happy if you cite this publication.
 
