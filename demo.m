@@ -32,6 +32,7 @@ N = length(imagelist);
 % ==== Set Options
 startIdx = 10;
 endIdx = min(1000,length(imagelist));
+mode = 6; % 6 : 6-param model for the ground, otherwise use 3-param model
 
 % ==== Initialize
 loadParams
@@ -73,7 +74,7 @@ for fn = (startIdx+1):(endIdx-1)
             [wF, alphaHat] = wF.zero();
             disp('static!');
         else
-            [MatchSequence, V, alpha, groundIdx_m1] = computeMotionAndScale(triMatch, MatchSequence, GndProb); % NOTE: non-holonomic motion and fixed camera height assumption 
+            [MatchSequence, V, alpha, groundIdx_m1] = computeMotionAndScale(triMatch, MatchSequence, GndProb, mode); % NOTE: non-holonomic motion and fixed camera height assumption 
                     
             if isempty(groundIdx_m1) || length(groundIdx_m1) < 10
                 [VF, Vhat] = VF.propagate();
@@ -105,8 +106,7 @@ for fn = (startIdx+1):(endIdx-1)
         
         disp('Press a key to continue.');
         pause; 
-        
-      
+              
         % ==== Move Forward     
         MatchSequence.m1 = MatchSequence.m2;   
         updateMatchSequence;
@@ -121,6 +121,6 @@ for fn = (startIdx+1):(endIdx-1)
 end
 
 % trajectory plot 
-figure(98), 
+figure(99), 
 plot(ref_path(:,1), ref_path(:,3),'r-'); hold on;
 plot(Phat_mat(:,2), Phat_mat(:,3),'.-'); axis equal; 

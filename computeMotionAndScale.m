@@ -15,7 +15,7 @@
 % 
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
-function [mseq, V, alpha, groundIdx_m1] = computeMotionAndScale(tri, mseq, Gprob)
+function [mseq, V, alpha, groundIdx_m1] = computeMotionAndScale(tri, mseq, Gprob, mode)
 
 global h        % camera height from the ground
 global f dt
@@ -56,8 +56,11 @@ else
     end
 
     % compute the scale by fitting ground surface model (3 param) 
-    [V, inliers, ~, ~] = computeScale_3param(lowerHalf(:,[4 1 2]),weights); 
-
+    if mode == 6
+        [V, inliers] = computeScale_6param(lowerHalf(:,[4 1 2]),weights); 
+    else
+        [V, inliers] = computeScale_3param(lowerHalf(:,[4 1 2]),weights); 
+    end
      
     mseq.invDepth(tri(zIdx,7)) = Zinv/V; 
     
@@ -70,7 +73,7 @@ else
         
     display_v_d
     displayGroundPoints_fig1
-    % NOTE: many outliers where d is close to zero.    
+    % NOTE: may have some outliers where d is close to zero.    
 end
 
 
