@@ -1,4 +1,4 @@
-/* This is a modified matlab code from a part of libelas(c++).
+/* This is a modified code from a part of libelas(c++).
  * The original code is published under GPL
  * and downloadable at http://www.cvlibs.net/software/libelas/
  * 

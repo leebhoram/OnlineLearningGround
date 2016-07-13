@@ -1,4 +1,4 @@
-/* This is a modified matlab code from a part of libviso2(c++).
+/* This is a modified code from a part of libviso2(c++).
  * The original code is published under GPL
  * and downloadable at http://www.cvlibs.net/software/libviso/
  * 
