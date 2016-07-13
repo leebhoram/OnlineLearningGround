@@ -28,7 +28,7 @@ NUM_ITER = 100;  % ceil(log(1-0.85)/log(1-(1-0.65)^NUM));
 global Ransac_param6;
 Ransac_param6= struct('req_numIter', NUM_ITER,...
                       'req_numData',0.35,...                     
-                      'sig_dist',0.001);  % THIS IS IMPORTANT FOR SCALE ESTIMATION
+                      'sig_dist',0.002);  % THIS IS IMPORTANT FOR SCALE ESTIMATION
                   
 rng('shuffle');  
 clear NUM NUM_ITER

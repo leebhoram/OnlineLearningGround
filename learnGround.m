@@ -23,7 +23,7 @@ HSVbinsG = mexUpdateHist(HSVbinsG,hsv',POI_G,fadingRate,int32(wndSampling));
 
 % G Points      
 ntot = sum(HSVbinsG);                
-log_Px = log((HSVbinsG+0.1)/(ntot+0.1*Nquan));     % Laplacian smoothing  
+log_Px = log((HSVbinsG+0.5)/(ntot+0.5*Nquan));     % Laplacian smoothing  
 
 % NG points                        
 ntot = sum(HSVbinsNG);                
@@ -55,6 +55,6 @@ for kj = (1+wndTesting):(height-wndTesting-1)
 end
 
 GndProb = exp(llhp)./(exp(llhp) + exp(llhngp));                                                  
-%displayGndProb
+displayGndProb
 
 end

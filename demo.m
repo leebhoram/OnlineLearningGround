@@ -30,9 +30,9 @@ addpath('./display');
 N = length(imagelist);
 
 % ==== Set Options
-startIdx = 10;
+startIdx = 1;
 endIdx = min(1000,length(imagelist));
-mode = 6; % 6 : 6-param model for the ground, otherwise use 3-param model
+mode = 3; % 6 : 6-param model for the ground, otherwise use 3-param model
 
 % ==== Initialize
 loadParams
