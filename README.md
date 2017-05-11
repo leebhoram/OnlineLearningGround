@@ -5,6 +5,8 @@ For details of the algorithm, please refer to the following related publication:
 
 B. Lee, K. Daniilidis, and Daniel D. Lee (2015) [Online self-supervised monocular visual odometry for ground vehicles, IEEE ICRA '15](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7139928).
 
+A video demonstration can be found at  http://youtu.be/lpYHxgBTpxA
+
 If you find this software useful or if you use this software for your research, we would be happy if you cite this publication.
 
 # Requirement 
